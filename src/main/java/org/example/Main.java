@@ -1,5 +1,4 @@
 package org.example;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -65,12 +64,10 @@ public class Main {
         // Перебираем заказы каждого покупателя и выводим информацию о них
         for (int i = 0; i < customers.size(); i++) {
             Object[] order = customers.get(i);
-            System.out.println("\nДанные покупателя " + (i + 1) + ":");
-            System.out.println("ФИО: " + order[0]);
-            System.out.println("Email: " + order[1]);
-            System.out.println("Номер телефона: " + order[2]);
-            System.out.println("Позиция товара: " + ((String[]) order[3])[0] + " - " + ((String[]) order[3])[1]);
-            System.out.println("Количество: " + order[4]);
+            System.out.println("\nДанные покупателя " + (i + 1) + ": " +
+                    "\nФИО: "+ order[0] + "\nEmail: " + order[1] + "\nНомер телефона: " + order[2] +
+                    "\nПозиция товара: " + ((String[]) order[3])[0] + " - " + ((String[]) order[3])[1] +
+                    "\nКоличество: " + order[4]);
         }
     }
 
