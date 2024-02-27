@@ -54,9 +54,9 @@ public class Main {
     }
 
     // Метод для удаления дублирующихся заказов
-    public static void removeDuplicates(ArrayList<Object[]> orders) {
+    public static void removeDuplicates(ArrayList<Object[]> customers) {
         // Используем поток для удаления дубликатов заказов
-        orders = orders.stream().distinct().collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+        customers.stream().distinct().collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
     }
 
     // Метод для вывода данных каждого заказчика и каждого заказа
