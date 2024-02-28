@@ -8,8 +8,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         // Создаем список для хранения заказов покупателей
         ArrayList<Object[]> customers = new ArrayList<>();
-        // Массив с наименованиями брендов и их марками
+        // Массив с наименованиями брендов часов нашего магазина
         String[] brands = {"Золотые часы", "Часы FixPrice", "Часы на каждый день"};
+        // Массив связанный с названиями брендов
         String[][] brandsToMarks = {{brands[0], "Золотой слиток"}, {brands[1], "Часы"}, {brands[2], "Повседнев"}};
 
         // Запускаем метод для заполнения данных о заказах покупателей
@@ -54,9 +55,9 @@ public class Main {
     }
 
     // Метод для удаления дублирующихся заказов
-    public static void removeDuplicates(ArrayList<Object[]> customers) {
+    public static ArrayList<Object[]> removeDuplicates(ArrayList<Object[]> customers) {
         // Используем поток для удаления дубликатов заказов
-        customers.stream().distinct().collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+        return customers.stream().distinct().collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
     }
 
     // Метод для вывода данных каждого заказчика и каждого заказа
